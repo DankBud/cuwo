@@ -299,6 +299,7 @@ class AntiCheatConnection(ConnectionScript):
             if self.hit_distance_strikes > self.max_hit_distance_strikes:
                 self.remove_cheater('hit distance too far, ' +
                                     'either cheating or lagging too much')
+                return False
         else:
             self.hit_distance_strikes = 0
 
